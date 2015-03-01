@@ -4,13 +4,14 @@
 
 Mal is a Clojure inspired Lisp interpreter.
 
-Mal is implemented in 26 different languages:
+Mal is implemented in 27 different languages:
 
 * Bash shell
 * C
 * C#
 * Clojure
 * CoffeeScript
+* Erlang
 * Forth
 * Go
 * Haskell
@@ -105,6 +106,13 @@ lein with-profile +stepX trampoline run
 sudo npm install -g coffee-script
 cd coffee
 coffee ./stepX_YYY
+```
+
+### Erlang
+
+```
+cd eralng
+escript stepX_YYY.erl
 ```
 
 ### Forth

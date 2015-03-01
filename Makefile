@@ -10,7 +10,7 @@ PYTHON = python
 # Settings
 #
 
-IMPLS = bash c clojure coffee cs forth go haskell java js lua make mal \
+IMPLS = bash c clojure coffee cs erlang forth go haskell java js lua make mal \
 	ocaml matlab miniMAL perl php ps python r racket ruby rust \
 	scala vb
 
@@ -58,6 +58,7 @@ c_STEP_TO_PROG =       c/$($(1))
 clojure_STEP_TO_PROG = clojure/src/$($(1)).clj
 coffee_STEP_TO_PROG =  coffee/$($(1)).coffee
 cs_STEP_TO_PROG =      cs/$($(1)).exe
+erlang_STEP_TO_PROG =	erlang/$($(1)).erl
 forth_STEP_TO_PROG =   forth/$($(1)).fs
 go_STEP_TO_PROG =      go/$($(1))
 java_STEP_TO_PROG =    java/src/main/java/mal/$($(1)).java
@@ -90,6 +91,7 @@ c_RUNSTEP =       ../$(2) $(3)
 clojure_RUNSTEP = lein with-profile +$(1) trampoline run $(3)
 coffee_RUNSTEP =  coffee ../$(2) $(3)
 cs_RUNSTEP =      mono ../$(2) --raw $(3)
+erlang_RUNSTEP = 	escript ../$(2) $(3)
 forth_RUNSTEP =   gforth ../$(2) $(3)
 go_RUNSTEP =      ../$(2) $(3)
 haskell_RUNSTEP = ../$(2) $(3)
